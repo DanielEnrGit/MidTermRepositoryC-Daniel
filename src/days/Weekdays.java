@@ -10,9 +10,19 @@ package days;
  */
 public class Weekdays 
 {
-  public void nameOfDay(String code)
-     {
-    switch(code.toUpperCase())
+    public enum Day {MONDAY, TUESDAY, WEDNESDAY, THURSDAY, FRIDAY, SATURDAY, SUNDAY}
+    
+    private Day day;
+    
+    public Weekdays (Day day) {
+    this.day = day;
+    }
+    
+    
+  public Day getDay() {return this.day;}
+  
+  public Day setDay(Day day) {return this.day;}
+    switch(day.toUpperCase())
       {
       case "ONE":
         System.out.println("Monday");
